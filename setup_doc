@@ -1,0 +1,74 @@
+#!/bin/bash
+
+DOC_NAME=${1:-untitled_doc}
+
+# create project folder
+mkdir $DOC_NAME
+cd $DOC_NAME || exit
+
+# create md template
+cat << EOF > main.md
+# $DOC_NAME
+EOF
+
+# create css template
+cat << EOF > styles.css
+@media print {
+    @page {
+        margin: 0px;
+    }
+}
+
+p {
+    font-size: 11pt;
+    margin: 0;
+}
+
+div {
+    margin: 0px;
+}
+
+li {
+    font-size: 11pt;
+}
+
+h2 {
+    font-size: 18pt;
+    margin: 0px;
+    margin-bottom: 2px;
+}
+
+h1 {
+    font-size: 25pt;
+    margin: 0px;
+}
+
+h3 {
+    font-size: 13pt;
+    font-weight: bold;
+    margin: 0px;
+}
+
+ul {
+    margin: 0px;
+}
+
+body {
+    font-family: "Times New Roman", times, serif;
+    margin: 50px;
+}
+EOF
+
+# create Makefile
+cat << EOF > Makefile
+$DOC_NAME: main.md styles.css
+	pandoc -s main.md -c styles.css -o index.html
+	/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --print-to-pdf=$DOC_NAME.pdf index.html
+
+clean:
+	rm index.html $DOC_NAME.pdf
+EOF
+
+# return to parent directory
+cd ..
+
