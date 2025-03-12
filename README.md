@@ -35,4 +35,4 @@ A Bash script to set up a Markdown writing environment with CSS styling and easy
     `export PATH="$HOME/bin:$PATH"`
 7. Save the added command
 
-    `source ~/.zshtc`
+    `source ~/.zshrc`
