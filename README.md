@@ -17,7 +17,7 @@ A Bash script to set up a Markdown writing environment with CSS styling and easy
      make`
 
 ## Installation (MacOS)
-1. Download the script: [setup_doc](https://github.com/jonahcragun/setup_doc/blob/main/setup_doc)
+1. Download the script: [setup_doc](https://raw.githubusercontent.com/jonahcragun/setup_doc/refs/heads/main/setup_doc)
 2. Create folder "~/bin" if it does not already exist
 
     `mkdir ~/bin`
