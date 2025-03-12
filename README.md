@@ -8,7 +8,6 @@ A Bash script to set up a Markdown writing environment with CSS styling and easy
 - PDF conversion with make (using pandoc and Chrome)
 
 ## Usage
-```bash
 ### Create project in current directory with default name
     `setup_doc`
 ### Create project in current directory with custom name
