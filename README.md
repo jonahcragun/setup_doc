@@ -17,16 +17,22 @@ A Bash script to set up a Markdown writing environment with CSS styling and easy
      make`
 
 ## Installation (MacOS)
-1. Download the file "setup_doc"
+1. Download the file "setup_doc" from github repostitory
 2. Create folder "~/bin" if it does not already exist
+
     `mkdir ~/bin`
 3. Navigate to the downloads folder
+
     `cd ~/Downloads`
 4. Move file to folder "~/bin"
+
     `mv setup_doc ~/bin/`
 5. Create file "~/.zshrc" if it does not already exist
+
     `touch ~/.zshrc`
 6. Add setup_doc path to "~/.zshrc"
+
     `export PATH="$HOME/bin:$PATH"`
 7. Save the added command
+
     `source ~/.zshtc`
